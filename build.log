@@ -1,0 +1,55 @@
+ 0:00.56 W Clobber not needed.
+ 0:00.64 W Adding make options from /home/natalie/Documents/GitHub/gecko-dev-arttulcat/.mozconfig
+    MOZ_OBJDIR=/home/natalie/Documents/GitHub/gecko-dev-arttulcat/obj-ff-build
+    OBJDIR=/home/natalie/Documents/GitHub/gecko-dev-arttulcat/obj-ff-build
+    FOUND_MOZCONFIG=/home/natalie/Documents/GitHub/gecko-dev-arttulcat/.mozconfig
+    export FOUND_MOZCONFIG
+ 0:00.64 /usr/bin/gmake -f client.mk -j48 -s
+ 0:01.40 ./buildid.h.stub
+ 0:01.40 ./source-repo.h.stub
+ 0:01.59 ./application.ini.stub
+ 0:01.78 ./application.ini.h.stub
+ 0:02.10 browser/app
+ 0:02.64 toolkit/library/buildid.cpp.stub
+ 0:02.88 toolkit/library
+ 0:02.93 toolkit/library/build/libxul.so
+ 0:03.95 browser/app/arttulcat
+ 0:06.73 ./last_modified.json.stub
+ 0:06.73 ./aboutNetErrorCodes.js.stub
+ 0:06.73 ./CrashManager.sys.mjs.stub
+ 0:06.73 ./FeatureManifest.sys.mjs.stub
+ 0:06.73 ./PromiseWorker.js.stub
+ 0:06.74 ./PromiseWorker.mjs.stub
+ 0:06.74 ./RFPTargetConstants.sys.mjs.stub
+ 0:06.74 ./ScalarArtifactDefinitions.json.stub
+ 0:06.74 ./EventArtifactDefinitions.json.stub
+ 0:06.74 ./dependentlibs.list.stub
+ 0:06.74 ./multilocale.txt.stub
+ 0:06.74 ./built_in_addons.json.stub
+ 0:06.87 browser/locales/updater.ini.stub
+ 0:06.97 Traceback (most recent call last):
+ 0:06.97   File "/usr/lib64/python3.9/runpy.py", line 197, in _run_module_as_main
+ 0:06.97     return _run_code(code, main_globals, None,
+ 0:06.97   File "/usr/lib64/python3.9/runpy.py", line 87, in _run_code
+ 0:06.97     exec(code, run_globals)
+ 0:06.97   File "/home/natalie/Documents/GitHub/gecko-dev-arttulcat/python/mozbuild/mozbuild/action/jar_maker.py", line 15, in <module>
+ 0:06.97     sys.exit(main(sys.argv[1:]))
+ 0:06.97   File "/home/natalie/Documents/GitHub/gecko-dev-arttulcat/python/mozbuild/mozbuild/action/jar_maker.py", line 11, in main
+ 0:06.97     return mozbuild.jar.main(args)
+ 0:06.97   File "/home/natalie/Documents/GitHub/gecko-dev-arttulcat/python/mozbuild/mozbuild/jar.py", line 637, in main
+ 0:06.97     jm.makeJar(infile, options.d)
+ 0:06.97   File "/home/natalie/Documents/GitHub/gecko-dev-arttulcat/python/mozbuild/mozbuild/jar.py", line 365, in makeJar
+ 0:06.97     self.processJarSection(info, jardir)
+ 0:06.97   File "/home/natalie/Documents/GitHub/gecko-dev-arttulcat/python/mozbuild/mozbuild/jar.py", line 414, in processJarSection
+ 0:06.97     self._processEntryLine(e, outHelper, jf)
+ 0:06.97   File "/home/natalie/Documents/GitHub/gecko-dev-arttulcat/python/mozbuild/mozbuild/jar.py", line 492, in _processEntryLine
+ 0:06.97     raise RuntimeError(
+ 0:06.97 RuntimeError: File "firefox-wordmark.svg" not found in /home/natalie/Documents/GitHub/gecko-dev-arttulcat/browser/branding/arttulcat/content, /home/natalie/Documents/GitHub/gecko-dev-arttulcat/obj-ff-build/browser/branding/arttulcat/content
+ 0:07.00 gmake[4]: *** [/home/natalie/Documents/GitHub/gecko-dev-arttulcat/config/rules.mk:877: misc] Error 1
+ 0:07.00 gmake[3]: *** [/home/natalie/Documents/GitHub/gecko-dev-arttulcat/config/recurse.mk:94: browser/branding/arttulcat/content/misc] Error 2
+ 0:07.00 gmake[3]: *** Waiting for unfinished jobs....
+ 0:08.06 gmake[2]: *** [/home/natalie/Documents/GitHub/gecko-dev-arttulcat/config/recurse.mk:34: misc] Error 2
+ 0:08.06 gmake[1]: *** [/home/natalie/Documents/GitHub/gecko-dev-arttulcat/config/rules.mk:359: default] Error 2
+ 0:08.06 gmake: *** [client.mk:60: build] Error 2
+ 0:08.16 W 256 compiler warnings present.
+  Parallelism determined by memory: using 48 jobs for 48 cores based on 125.3 GiB RAM and estimated job size of 1.0 GiB
