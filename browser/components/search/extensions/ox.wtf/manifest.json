@@ -1,0 +1,19 @@
+{
+  "manifest_version": 2,
+  "name": "xo.wtf",
+  "version": "1.0",
+  "applications": {
+    "gecko": {
+      "id": "xo.wtf@search.mozilla.org"
+    }
+  },
+  "chrome_settings_overrides": {
+    "search_provider": {
+      "name": "xo.wtf",
+      "search_url": "https://xo.wtf/search?q={searchTerms}",
+      "suggest_url": "",
+      "keyword": "xo",
+      "favicon_url": "https://xo.wtf/favicon.ico"
+    }
+  }
+}

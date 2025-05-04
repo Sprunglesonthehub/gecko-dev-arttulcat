@@ -1,0 +1,13 @@
+{
+  "default": {
+    "region": "US",
+    "default": "xo.wtf",
+    "visibleDefaultEngines": [ "xo.wtf" ]
+  },
+  "engines": {
+    "xo.wtf": {
+      "alias": "@xo",
+      "webExtension": "xo.wtf"
+    }
+  }
+}

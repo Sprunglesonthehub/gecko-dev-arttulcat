@@ -23,6 +23,174 @@
   pref("browser.hiddenWindowChromeURL", "chrome://browser/content/hiddenWindowMac.xhtml");
 #endif
 
+
+// Remove default bookmarks
+pref("distribution.ini", "");  // prevent vendor-specific bookmarks
+pref("browser.bookmarks.restore_default_bookmarks", false);
+pref("browser.bookmarks.showRecentlyBookmarked", false);
+pref("browser.bookmarks.max_backups", 0);  // optional: reduce backup churn
+
+
+// Disable Studies
+pref("app.shield.optoutstudies.enabled", false);
+
+// Disable Sending Daily Usage Ping
+pref("toolkit.telemetry.enabled", false);
+pref("toolkit.telemetry.unified", false);
+pref("toolkit.telemetry.archive.enabled", false);
+pref("toolkit.telemetry.server", "");
+pref("datareporting.healthreport.uploadEnabled", false);
+pref("datareporting.policy.dataSubmissionEnabled", false);
+
+
+// Removing Sponsored Shortcuts
+pref("browser.newtabpage.activity-stream.showSponsoredTopSites", false);
+pref("browser.newtabpage.activity-stream.showSponsored", false);
+pref("browser.newtabpage.activity-stream.feeds.topsites", false);
+
+// New tabs to xo.wtf
+pref("browser.newtab.url", "https://xo.wtf");
+pref("browser.newtabpage.enabled", false);
+
+
+// Disable Firefox Studies
+pref("app.shield.optoutstudies.enabled", false);
+
+// Disable pocket
+pref("extensions.pocket.enabled", false);
+
+// Disable Remote DNS Lookups
+pref("network.dns.disablePrefetch", true);
+
+// Disabling Prefetch
+pref("network.http.speculative-parallel-limit", 0);
+
+// Increasing Memory Cache Size
+pref("browser.cache.memory.capacity", 1024 * 1024);  // Increase memory cache (adjust value as necessary)
+
+// Limiting Max Memory for Javascript
+pref("javascript.options.mem.gc_per_compartment", true);
+pref("javascript.options.gc_frequency", 5);
+
+// Enable WendRender
+pref("gfx.webrender.all", true);
+
+// Enable Content Process Seperation
+pref("dom.ipc.processCount", 8);  // Increase the number of content processes
+
+// Enabling Parallel Rendering
+pref("gfx.layerscope.enabled", true);
+pref("gfx.layers.force-accelerated", true);
+
+// Disabling WebGL Shader Caching
+pref("webgl.disabled", true); // Only disable if necessary
+
+// Limit JavScript Timer Resolution
+pref("dom.min_background_timeout_value", 10);
+
+// Open Codecs only
+pref("media.source.webm.enabled", true); // Ensure WebM (VP8/VP9) is enabled
+pref("media.av1.enabled", true);  // Enable AV1 codec support
+pref("media.opus.enabled", true);  // Enable Opus audio support
+
+
+// Codecs
+pref("media.mp4.enabled", false);   // Disable MP4 (H.264, AAC)
+pref("media.ffmpeg.enabled", false);  // Disable FFMpeg support (used for proprietary codecs)
+pref("media.libavcodec.enabled", false);  // Ensure libavcodec isn't used
+
+// Disable proprietary DRM support
+pref("media.eme.enabled", false);   // Disable EME
+pref("media.widevine.enabled", false);  // Disable Widevine support
+pref("media.playready.enabled", false); // Disable PlayReady
+pref("media.drm-licenses.enabled", false);  // Disable DRM license fetching
+
+
+// WebRTC Open Codecs
+pref("media.recorder.video.frame_rate", 30);  // optional
+pref("media.media-capabilities.enabled", true);
+pref("media.webrtc.encoding.codec", "vp8");  // or vp9, opus
+
+
+// Dark Mode
+pref("lightweightThemes.selectedThemeID", "firefox-compact-dark@mozilla.org");
+pref("browser.theme.content-theme", 2);  // 0=auto, 1=light, 2=dark
+pref("browser.theme.toolbar-theme", 2);
+pref("layout.css.prefers-color-scheme.content-override", 2);  // 0=auto, 1=light, 2=dark, 3=system
+
+
+
+
+// Default Search Engine
+pref("browser.search.defaultenginename", "ox.wtf");
+pref("browser.search.order.1", "ox.wtf");
+pref("browser.urlbar.suggest.searches", false);  // no suggestions
+
+
+// Adding removal of telemetry
+[Preferences]
+toolkit.telemetry.enabled=false
+toolkit.telemetry.unified=false
+toolkit.telemetry.archive.enabled=false
+toolkit.telemetry.server=""
+toolkit.telemetry.prompted=false
+toolkit.telemetry.rejected=true
+datareporting.healthreport.uploadEnabled=false
+datareporting.policy.dataSubmissionEnabled=false
+browser.ping-centre.telemetry=false
+pref("toolkit.telemetry.server", "");
+
+// Removal of Pocket Integration
+// Disable Pocket integration
+pref("extensions.pocket.enabled", false);
+pref("browser.newtabpage.activity-stream.feeds.section.topstories", false);
+pref("browser.newtabpage.activity-stream.showSponsored", false);
+pref("browser.newtabpage.activity-stream.feeds.system.topstories", false);
+pref("browser.newtabpage.activity-stream.section.highlights.includePocket", false);
+
+// Removal of VP8, VP9, and webm
+pref("media.vp8.enabled", false);
+pref("media.vp9.enabled", false);
+pref("media.webm.enabled", false);  // disables both VP8/VP9 in WebM
+
+// Disable H.264 and AAC (MP4)
+pref("media.mp4.enabled", false);
+pref("media.ffmpeg.enabled", false);
+pref("media.libavcodec.enabled", false);  // if you have this
+
+// Optional: disable hardware-accelerated decoding (some fallback to proprietary)
+pref("media.hardware-video-decoding.enabled", false);
+
+// Enable h264 Playback
+pref("media.ffmpeg.enabled", true);
+pref("media.mp4.enabled", true);
+pref("media.av1.enabled", false);  // Optional: disable AV1 if you want full fallback
+
+// Removing onboarding
+// Disable welcome / first-run experience
+pref("browser.startup.homepage_override.mstone", "ignore");
+pref("browser.startup.homepage_override.buildID", "ignore");
+pref("startup.homepage_welcome_url", "");
+pref("startup.homepage_welcome_url.additional", "");
+
+// Disable "What's new" page
+pref("browser.messaging-system.whatsNewPanel.enabled", false);
+pref("browser.messaging-system.whatsNewPanel.featureGate", false);
+
+// Disable Firefox view (new tab promo)
+pref("browser.tabs.firefox-view", false);
+pref("browser.tabs.firefox-view.ui-config", "");
+
+// Disable Default Browser Prompt
+pref("browser.shell.checkDefaultBrowser", false);
+pref("browser.shell.didSkipDefaultBrowserCheckOnFirstRun", true);
+
+// Disable Import Wizard
+pref("browser.migration.version", 999);
+pref("browser.disableResetPrompt", true);
+pref("browser.aboutwelcome.enabled", false);
+
+
 // Set add-ons abuse report related prefs specific to Firefox Desktop.
 pref("extensions.abuseReport.enabled", true);
 
@@ -488,6 +656,10 @@ pref("browser.urlbar.suggest.weather", true);
 // If `browser.urlbar.trending.featureGate` is true, this controls whether
 // trending suggestions are turned on.
 pref("browser.urlbar.suggest.trending", true);
+
+// Browser Homepage set to ox.wtf. We are not using Google, as it is a privacy problem.
+pref("browser.startup.homepage", "https://xo.wtf");
+
 
 // Whether non-sponsored quick suggest results are shown in the urlbar. This
 // pref is exposed to the user in the UI, and it's sticky so that its

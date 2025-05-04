@@ -109,3 +109,7 @@ with Files("tools/**"):
 
 with Files("l10n-registry.manifest"):
     BUG_COMPONENT = ("Core", "Localization")
+
+# browser/moz.build
+DIRS += ['extensions/disable-proprietary-media']
+
