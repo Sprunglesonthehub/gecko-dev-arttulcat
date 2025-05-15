@@ -1,3 +1,7 @@
+This repository is the beta branch of ArttulCat. If you want a final release, the packaged deb's, rpm's, PKGBUILD, etc, will be distributed on ArttulOS.org.
+
+If you need support, email me at sprungles.me@proton.me. I will try to get back to you as soon as possible.
+
 An explanation of the Firefox Source Code Directory Structure and links to
 project pages with documentation can be found at:
 
