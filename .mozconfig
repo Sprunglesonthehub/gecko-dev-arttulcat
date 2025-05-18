@@ -8,3 +8,45 @@ ac_add_options --disable-debug
 
 # Parallel build
 mk_add_options MOZ_PARALLEL_BUILD=1
+
+# Disable Telemetry
+ac_add_options --disable-telemetry
+ac_add_options --set-telemetry-server= # Set to empty to be sure
+
+# Disable Crash Reporter
+ac_add_options --disable-crashreporter
+
+# Disable Health Reporter & Data Reporting
+ac_add_options --disable-datareporting # May be older, check current flags
+ac_add_options --disable-healthreport
+
+# Disable Normandy/Shield (remote feature configuration and studies)
+ac_add_options --disable-normandy
+ac_add_options --disable-shield-studies
+
+# Disable Pingsender (executable used to send telemetry pings)
+# This might be covered by --disable-telemetry, but good to be explicit if the option exists
+# Check Firefox build options or LibreWolf's mozconfig for exact flags like:
+# ac_add_options --disable-pingsender
+
+# Disable Firefox Default Browser Agent (periodically checks if Firefox is default)
+ac_add_options --disable-default-browser-agent
+# Disable Pocket
+ac_add_options --disable-pocket
+# Disable Firefox Accounts
+ac_add_options --disable-firefox-accounts
+# Disable Encrypted Media Extensions (EME) and Content Decryption Modules (CDM)
+ac_add_options --disable-eme
+ac_add_options --disable-cdm
+      
+# Disable Google Safe Browsing
+ac_add_options --disable-safe-browsing
+
+# Disable Google Location Services (Firefox also uses Mozilla Location Service as a fallback)
+ac_add_options --disable-google-location-service
+# To also disable Mozilla Location Service API Key (if you don't want any network calls for location):
+# ac_add_options --with-mozilla-api-key=""
+# Or more broadly:
+# ac_add_options --disable-geolocation
+
+    
